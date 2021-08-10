@@ -31,7 +31,7 @@ void printDiamond(int base)
 
 int main()
 {
-    printDiamond(97);
+    printDiamond(103);
 
     return 0;
 }
