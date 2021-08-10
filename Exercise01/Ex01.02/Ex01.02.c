@@ -12,6 +12,9 @@ int main()
         printf("Enter a character\n");
         scanf_s(" %c", &userInput, 1);
 
+        if (userInput == 'q' || userInput == 'Q')
+            break;
+
         if (userInput <= LARGEST_LOWER_CASE_LETTER && userInput >= SMALLEST_LOWER_CASE_LETTER)
             userInput -= UPPER_AND_LOWER_DIFFERENCE;
 
