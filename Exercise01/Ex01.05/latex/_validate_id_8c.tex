@@ -1,0 +1,79 @@
+\hypertarget{_validate_id_8c}{}\doxysection{Validate\+Id.\+c File Reference}
+\label{_validate_id_8c}\index{ValidateId.c@{ValidateId.c}}
+{\ttfamily \#include \char`\"{}Validate\+Id.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{_validate_id_8c_a59d3cee5b103cac48f64132535c265da}{check\+IDValidity}} (int id)
+\item 
+int \mbox{\hyperlink{_validate_id_8c_a74d8ec8be91e45ea9919685661635fa5}{num\+Length}} (int num)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{_validate_id_8c_a8f0035a68b57201cc8c350ec72928325}{TRUE}} = 1
+\item 
+int \mbox{\hyperlink{_validate_id_8c_ad5827b7d4e5f71771b3f25a879bf7140}{FALSE}} = 0
+\item 
+int \mbox{\hyperlink{_validate_id_8c_aec975a294b9fd1040903eddb97c303ad}{LARGEST\+\_\+\+SINGLE\+\_\+\+DIGIT\+\_\+\+NO}} = 9
+\item 
+int \mbox{\hyperlink{_validate_id_8c_a94af14b294d7dddd8c553bd787c24242}{LENGTH\+\_\+\+OF\+\_\+\+ID}} = 9
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{_validate_id_8c_a59d3cee5b103cac48f64132535c265da}\label{_validate_id_8c_a59d3cee5b103cac48f64132535c265da}} 
+\index{ValidateId.c@{ValidateId.c}!checkIDValidity@{checkIDValidity}}
+\index{checkIDValidity@{checkIDValidity}!ValidateId.c@{ValidateId.c}}
+\doxysubsubsection{\texorpdfstring{checkIDValidity()}{checkIDValidity()}}
+{\footnotesize\ttfamily int check\+IDValidity (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})}
+
+Function that checks whether an ID is a valid ID based on the check bit 
+\begin{DoxyParams}{Parameters}
+{\em an} & ID number \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the ID is valid, False if the ID is not a valid ID 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_validate_id_8c_a74d8ec8be91e45ea9919685661635fa5}\label{_validate_id_8c_a74d8ec8be91e45ea9919685661635fa5}} 
+\index{ValidateId.c@{ValidateId.c}!numLength@{numLength}}
+\index{numLength@{numLength}!ValidateId.c@{ValidateId.c}}
+\doxysubsubsection{\texorpdfstring{numLength()}{numLength()}}
+{\footnotesize\ttfamily int num\+Length (\begin{DoxyParamCaption}\item[{int}]{num }\end{DoxyParamCaption})}
+
+Calculates the amount of digits that are in the integer number 
+\begin{DoxyParams}{Parameters}
+{\em an} & integer number \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+amount of digits in the number 
+\end{DoxyReturn}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{_validate_id_8c_ad5827b7d4e5f71771b3f25a879bf7140}\label{_validate_id_8c_ad5827b7d4e5f71771b3f25a879bf7140}} 
+\index{ValidateId.c@{ValidateId.c}!FALSE@{FALSE}}
+\index{FALSE@{FALSE}!ValidateId.c@{ValidateId.c}}
+\doxysubsubsection{\texorpdfstring{FALSE}{FALSE}}
+{\footnotesize\ttfamily int FALSE = 0}
+
+\mbox{\Hypertarget{_validate_id_8c_aec975a294b9fd1040903eddb97c303ad}\label{_validate_id_8c_aec975a294b9fd1040903eddb97c303ad}} 
+\index{ValidateId.c@{ValidateId.c}!LARGEST\_SINGLE\_DIGIT\_NO@{LARGEST\_SINGLE\_DIGIT\_NO}}
+\index{LARGEST\_SINGLE\_DIGIT\_NO@{LARGEST\_SINGLE\_DIGIT\_NO}!ValidateId.c@{ValidateId.c}}
+\doxysubsubsection{\texorpdfstring{LARGEST\_SINGLE\_DIGIT\_NO}{LARGEST\_SINGLE\_DIGIT\_NO}}
+{\footnotesize\ttfamily int LARGEST\+\_\+\+SINGLE\+\_\+\+DIGIT\+\_\+\+NO = 9}
+
+\mbox{\Hypertarget{_validate_id_8c_a94af14b294d7dddd8c553bd787c24242}\label{_validate_id_8c_a94af14b294d7dddd8c553bd787c24242}} 
+\index{ValidateId.c@{ValidateId.c}!LENGTH\_OF\_ID@{LENGTH\_OF\_ID}}
+\index{LENGTH\_OF\_ID@{LENGTH\_OF\_ID}!ValidateId.c@{ValidateId.c}}
+\doxysubsubsection{\texorpdfstring{LENGTH\_OF\_ID}{LENGTH\_OF\_ID}}
+{\footnotesize\ttfamily int LENGTH\+\_\+\+OF\+\_\+\+ID = 9}
+
+\mbox{\Hypertarget{_validate_id_8c_a8f0035a68b57201cc8c350ec72928325}\label{_validate_id_8c_a8f0035a68b57201cc8c350ec72928325}} 
+\index{ValidateId.c@{ValidateId.c}!TRUE@{TRUE}}
+\index{TRUE@{TRUE}!ValidateId.c@{ValidateId.c}}
+\doxysubsubsection{\texorpdfstring{TRUE}{TRUE}}
+{\footnotesize\ttfamily int TRUE = 1}
+

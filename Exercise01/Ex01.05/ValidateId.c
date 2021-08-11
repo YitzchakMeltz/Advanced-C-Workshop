@@ -10,6 +10,7 @@ int checkIDValidity(int id)
     int sum = 0;
     int singleDigit;
 
+    // returns false if the ID inputed is not 9 digits
     if (numLength(id) != LENGTH_OF_ID)
         return FALSE;
 
