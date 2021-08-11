@@ -1,0 +1,4 @@
+
+
+int readNumber();
+void secondToEdge();

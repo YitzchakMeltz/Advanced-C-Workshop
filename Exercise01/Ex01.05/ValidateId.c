@@ -3,12 +3,15 @@
 int TRUE = 1;
 int FALSE = 0;
 int LARGEST_SINGLE_DIGIT_NO = 9;
-
+int LENGTH_OF_ID = 9;
 
 int checkIDValidity(int id)
 {
     int sum = 0;
     int singleDigit;
+
+    if (numLength(id) != LENGTH_OF_ID)
+        return FALSE;
 
     for (int i = 0; i < 9; i += 2)
     {
@@ -32,4 +35,19 @@ int checkIDValidity(int id)
         return TRUE;
 
     return FALSE;
+}
+
+int numLength(int num)
+{
+    int count = 1;
+
+    num = num / 10;
+
+    while (num != 0)
+    {
+        num = num / 10;
+        count++;
+    }
+
+    return count;
 }
