@@ -53,6 +53,7 @@ int secondToEdge(int* num1, int* num2)
     {
         userInput = readNumber();
 
+        // ends user input
         if (userInput == 0)
         {
             *num1 = secondLargest;
@@ -60,23 +61,27 @@ int secondToEdge(int* num1, int* num2)
             return FUNCTION_ENDED_SUCCESFULLY;
         }
 
+        // useInput is the smallest number
         if (userInput < smallest)
         {
             secondSmallest = smallest;
             smallest = userInput;
         }
 
+        // useInput is the second to smallest number
         if (userInput < secondSmallest && userInput > smallest)
         {
             secondSmallest = userInput;
         }
 
+        // useInput is the largest number
         if (userInput > largest)
         {
             secondLargest = largest;
             largest = userInput;
         }
 
+        // useInput is the second to largest number
         if (userInput<largest && userInput>secondLargest)
         {
             secondLargest = userInput;
@@ -84,6 +89,7 @@ int secondToEdge(int* num1, int* num2)
 
     } while (userInput != 0);
 
+    // set the references to the two numbers to be outputed
     *num1 = secondLargest;
     *num2 = secondSmallest;
 
