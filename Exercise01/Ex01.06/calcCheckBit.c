@@ -9,6 +9,7 @@ int calcCheckBit(int id)
 
     int remainder = sumOfIdDigits % 10;
 
+    // calculate what number is needed to make sum % 10 == 0
     return (10 - remainder);
 }
 
@@ -24,15 +25,19 @@ int sumOfNumbers(int num)
     {
         singleDigit = num % 10;
 
+        // Double the number for every even number
         if (i % 2 == 0)
         {
             singleDigit = singleDigit * 2;
 
+            // Combine digits if number is a 2 digit number
             if (singleDigit > LARGEST_SINGLE_DIGIT_NO)
                 singleDigit = combineDigits(singleDigit);
         }
 
         sum += singleDigit;
+
+        // Drop the farmost right digit
         num = num / 10;
     }
 

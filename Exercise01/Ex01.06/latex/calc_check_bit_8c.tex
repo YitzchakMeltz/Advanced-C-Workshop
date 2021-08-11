@@ -28,24 +28,56 @@ int \mbox{\hyperlink{calc_check_bit_8c_a37a24e4bdb8eb82711d9722a5ffd8c56}{LARGES
 \doxysubsubsection{\texorpdfstring{calcCheckBit()}{calcCheckBit()}}
 {\footnotesize\ttfamily int calc\+Check\+Bit (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})}
 
+Function that calculates the check bit for an Israeli ID number 
+\begin{DoxyParams}{Parameters}
+{\em 8digit} & ID Number (without the check bit) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the check bit 
+\end{DoxyReturn}
 \mbox{\Hypertarget{calc_check_bit_8c_a3dcce5189d87a134ff8db3a1081cd596}\label{calc_check_bit_8c_a3dcce5189d87a134ff8db3a1081cd596}} 
 \index{calcCheckBit.c@{calcCheckBit.c}!combineDigits@{combineDigits}}
 \index{combineDigits@{combineDigits}!calcCheckBit.c@{calcCheckBit.c}}
 \doxysubsubsection{\texorpdfstring{combineDigits()}{combineDigits()}}
 {\footnotesize\ttfamily int combine\+Digits (\begin{DoxyParamCaption}\item[{int}]{num }\end{DoxyParamCaption})}
 
-Function that combines two digit numbers to a one digit number \mbox{\Hypertarget{calc_check_bit_8c_a74d8ec8be91e45ea9919685661635fa5}\label{calc_check_bit_8c_a74d8ec8be91e45ea9919685661635fa5}} 
+Function that combines two digit numbers to a one digit number (by adding them together) 
+\begin{DoxyParams}{Parameters}
+{\em 2} & digit number \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 digit number 
+\end{DoxyReturn}
+\mbox{\Hypertarget{calc_check_bit_8c_a74d8ec8be91e45ea9919685661635fa5}\label{calc_check_bit_8c_a74d8ec8be91e45ea9919685661635fa5}} 
 \index{calcCheckBit.c@{calcCheckBit.c}!numLength@{numLength}}
 \index{numLength@{numLength}!calcCheckBit.c@{calcCheckBit.c}}
 \doxysubsubsection{\texorpdfstring{numLength()}{numLength()}}
 {\footnotesize\ttfamily int num\+Length (\begin{DoxyParamCaption}\item[{int}]{num }\end{DoxyParamCaption})}
 
+Function that calculates how many digits an intger has 
+\begin{DoxyParams}{Parameters}
+{\em integer} & number \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+amount of digits in the number 
+\end{DoxyReturn}
 \mbox{\Hypertarget{calc_check_bit_8c_a52ef6d0d921c5386ac55a91ed940b83e}\label{calc_check_bit_8c_a52ef6d0d921c5386ac55a91ed940b83e}} 
 \index{calcCheckBit.c@{calcCheckBit.c}!sumOfNumbers@{sumOfNumbers}}
 \index{sumOfNumbers@{sumOfNumbers}!calcCheckBit.c@{calcCheckBit.c}}
 \doxysubsubsection{\texorpdfstring{sumOfNumbers()}{sumOfNumbers()}}
 {\footnotesize\ttfamily int sum\+Of\+Numbers (\begin{DoxyParamCaption}\item[{int}]{num }\end{DoxyParamCaption})}
 
+Function that sums the numbers while doubling every other number 
+\begin{DoxyParams}{Parameters}
+{\em integer} & number \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a sum according to above specifications 
+\end{DoxyReturn}
 
 
 \doxysubsection{Variable Documentation}
