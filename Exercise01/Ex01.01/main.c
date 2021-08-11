@@ -1,6 +1,6 @@
 #include "echo.h"
 
-int main()
+int main(void)
 {
     echo();
 

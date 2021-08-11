@@ -1,7 +1,7 @@
 #include<stdio.h>
 #include "echo.h"
 
-void echo()
+void echo(void)
 {
     char userInput;
 

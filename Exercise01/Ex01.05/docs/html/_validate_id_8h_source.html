@@ -65,13 +65,18 @@ $(function() {
 <div class="title">ValidateId.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="_validate_id_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include&lt;stdio.h&gt;</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keywordtype">int</span> <a class="code" href="_validate_id_8h.html#a59d3cee5b103cac48f64132535c265da">checkIDValidity</a>(<span class="keywordtype">int</span> <span class="keywordtype">id</span>);</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keywordtype">int</span> <a class="code" href="_validate_id_8h.html#a74d8ec8be91e45ea9919685661635fa5">numLength</a>(<span class="keywordtype">int</span> num);</div>
-<div class="ttc" id="a_validate_id_8h_html_a59d3cee5b103cac48f64132535c265da"><div class="ttname"><a href="_validate_id_8h.html#a59d3cee5b103cac48f64132535c265da">checkIDValidity</a></div><div class="ttdeci">int checkIDValidity(int id)</div><div class="ttdef"><b>Definition:</b> ValidateId.c:8</div></div>
-<div class="ttc" id="a_validate_id_8h_html_a74d8ec8be91e45ea9919685661635fa5"><div class="ttname"><a href="_validate_id_8h.html#a74d8ec8be91e45ea9919685661635fa5">numLength</a></div><div class="ttdeci">int numLength(int num)</div><div class="ttdef"><b>Definition:</b> ValidateId.c:41</div></div>
+<a href="_validate_id_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef VALIDATE_ID_H</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define VALIDATE_ID_H</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include&lt;stdio.h&gt;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keywordtype">int</span> <a class="code" href="_validate_id_8h.html#a59d3cee5b103cac48f64132535c265da">checkIDValidity</a>(<span class="keywordtype">int</span> <span class="keywordtype">id</span>);</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keywordtype">int</span> <a class="code" href="_validate_id_8h.html#a74d8ec8be91e45ea9919685661635fa5">numLength</a>(<span class="keywordtype">int</span> num);</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="a_validate_id_8h_html_a59d3cee5b103cac48f64132535c265da"><div class="ttname"><a href="_validate_id_8h.html#a59d3cee5b103cac48f64132535c265da">checkIDValidity</a></div><div class="ttdeci">int checkIDValidity(int id)</div><div class="ttdoc">Checks whether an ID is a valid ID based on the check bit.</div><div class="ttdef"><b>Definition:</b> ValidateId.c:8</div></div>
+<div class="ttc" id="a_validate_id_8h_html_a74d8ec8be91e45ea9919685661635fa5"><div class="ttname"><a href="_validate_id_8h.html#a74d8ec8be91e45ea9919685661635fa5">numLength</a></div><div class="ttdeci">int numLength(int num)</div><div class="ttdoc">Calculates the amount of digits that are in the integer number.</div><div class="ttdef"><b>Definition:</b> ValidateId.c:41</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
