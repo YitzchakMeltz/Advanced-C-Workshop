@@ -14,7 +14,7 @@ int checkIDValidity(int id)
     if (numLength(id) != LENGTH_OF_ID)
         return FALSE;
 
-    for (int i = 0; i < 9; i += 2)
+    for (int index = 0; index < 9; index += 2)
     {
         sum += id % 10;
 

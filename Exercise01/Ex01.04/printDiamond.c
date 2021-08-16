@@ -4,29 +4,29 @@
 void printDiamond(int base)
 {
     //Generate *'s until the base
-    for (int i = 0; i < base / 2; i++)
+    for (int index = 0; index < base / 2; index++)
     {
-        for (int j = 0; j < (base / 2) - i; j++)
+        for (int jindex = 0; jindex < (base / 2) - index; jindex++)
             printf(" ");
 
-        for (int j = 0; j < 2 * i; j++)
+        for (int jindex = 0; jindex < 2 * index; jindex++)
             printf("*");
 
         printf("*\n");
     }
 
     //Generate the base
-    for (int i = 0; i < base; i++)
+    for (int index = 0; index < base; index++)
         printf("*");
     printf("\n");
 
     //Generate *'s after the base
-    for (int i = (base / 2) - 1; i >= 0; i--)
+    for (int index = (base / 2) - 1; index >= 0; index--)
     {
-        for (int j = 0; j < (base / 2) - i; j++)
+        for (int jindex = 0; jindex < (base / 2) - index; jindex++)
             printf(" ");
 
-        for (int j = 0; j < 2 * i; j++)
+        for (int jindex = 0; jindex < 2 * index; jindex++)
             printf("*");
 
         printf("*\n");

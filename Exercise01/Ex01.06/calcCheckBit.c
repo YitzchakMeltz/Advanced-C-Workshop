@@ -21,12 +21,12 @@ int sumOfNumbers(int num)
 
     int singleDigit;
 
-    for (int i = 0; i < length; i++)
+    for (int index = 0; index < length; index++)
     {
         singleDigit = num % 10;
 
         // Double the number for every even number
-        if (i % 2 == 0)
+        if (index % 2 == 0)
         {
             singleDigit = singleDigit * 2;
 
