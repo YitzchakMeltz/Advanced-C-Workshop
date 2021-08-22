@@ -8,7 +8,7 @@ void wordReverse(char* str)
     if (*str == '\0')
         return;
 
-    char* token = (char *)malloc(sizeof(char) * wordSize(str));
+    char* token = (char *)malloc(sizeof(char) * (wordSize(str) + 1));
 
     char* tokenIter = token;
 
