@@ -5,41 +5,42 @@
 
 int main()
 {
+    int dim;
 
-    int matrix[2][2] = { { 1,2 } , {-2, 4} };
+    printf("Enter the matrix dimension\n");
 
-    for (int i = 0; i < 2; ++i)
+    scanf_s("%d", &dim);
+
+    //initialize a 2d matrix based on userInput
+    int *matrix = (int*)malloc(sizeof(int) * dim * dim);
+
+    printf("Enter the matrix elements\n");
+
+    for (int row = 0; row < dim; ++row)
     {
-        for (int j = 0; j < 2; ++j)
+        for (int col = 0; col < dim; ++col)
         {
-            printf("%d ", matrix[i][j]);
+            //check that (matrix + row * dim + col) isn't going to return NULL
+            if (matrix + row * dim + col)
+                scanf_s("%d", &*(matrix + row * dim + col));
         }
 
         printf("\n");
     }
 
-    if (symmetric(matrix, 2) == 1)
-        printf("Symmetric\n");
-    else
-        printf("Not Symmetric\n");
+    printf("Inputed matrix is:\n");
 
-    if (skewSymmetric(matrix, 2) == 1)
-        printf("Skew-Symmetric\n");
-    else
-        printf("Not Skew-Symmetric\n");
+    printMatrix(matrix, dim);
 
-    transposeMatrix(matrix, 2);
-    printf("\n");
+    int matrixType = transposeMatrix(matrix, dim);
 
-    for (int i = 0; i < 2; ++i)
-    {
-        for (int j = 0; j < 2; ++j)
-        {
-            printf("%d ", matrix[i][j]);
-        }
+    if (matrixType == 1)
+        printf("The inputed matrix is symmetrical");
 
-        printf("\n");
-    }
+    if (matrixType == 2)
+        printf("The inputed matrix is skew-symmetrical");
+
+    free(matrix);
 
     return 0;
 }
