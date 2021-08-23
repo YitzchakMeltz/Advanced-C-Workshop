@@ -1,7 +1,7 @@
 #include<stdio.h>
 #include "envp.h"
 
-int main(size_t argc, char* argv[], char* envp[])
+int main(size_t argc, char *argv[], char *envp[])
 {
     if (argc > 2 || argc < 2)
         printf("ERROR\nNot the correct ammount of program arguments!\n");

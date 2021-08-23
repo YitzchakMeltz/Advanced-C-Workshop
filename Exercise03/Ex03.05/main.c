@@ -2,9 +2,6 @@
 #include <stdlib.h>
 #include "transpose.h"
 
-
-
-
 int main()
 {
 

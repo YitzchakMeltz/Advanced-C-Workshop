@@ -1,13 +1,13 @@
 #include "transpose.h"
 
-void swap(int* num1, int* num2)
+void swap(int *num1, int *num2)
 {
     int temp = *num1;
     *num1 = *num2;
     *num2 = temp;
 }
 
-void transposeMatrix(int** matrix, int dim)
+void transposeMatrix(int **matrix, int dim)
 {
     for (int row = 0; row < dim; ++row)
     {
@@ -16,9 +16,4 @@ void transposeMatrix(int** matrix, int dim)
             swap((((int*)matrix) + row * dim + column), (((int*)matrix) + row + column * dim));
         }
     }
-}
-
-int symmetric(int** matrix, int dim)
-{
-
 }

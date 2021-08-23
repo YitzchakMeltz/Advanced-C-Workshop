@@ -1,11 +1,11 @@
 #include<stdio.h>
 #include "envp.h"
 
-char* getVarName(char* str)
+char* getVarName(char *str)
 {
     size_t varNameSize = 0;
 
-    char* inputIter = str;
+    char *inputIter = str;
 
     while (*inputIter != '=')
     {
@@ -15,10 +15,10 @@ char* getVarName(char* str)
 
     varNameSize++;
 
-    char* varName = (char*)malloc(sizeof(char) * varNameSize);
+    char *varName = (char*)malloc(sizeof(char) * varNameSize);
 
     inputIter = str;
-    char* resultIter = varName;
+    char *resultIter = varName;
 
     while (*inputIter != '=')
     {
@@ -33,9 +33,9 @@ char* getVarName(char* str)
     return varName;
 }
 
-char* getVarValue(char* str)
+char* getVarValue(char *str)
 {
-    char* inputIter = str;
+    char *inputIter = str;
 
     while (*inputIter != '=')
     {

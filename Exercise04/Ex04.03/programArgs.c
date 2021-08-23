@@ -8,7 +8,7 @@
 #define SMALLEST_UPPER_CASE_LETTER 65
 #define LARGEST_UPPER_CASE_LETTER 90
 
-size_t countSwitches(size_t argc, char* argv[])
+size_t countSwitches(size_t argc, char *argv[])
 {
     size_t counter = 0;
 
@@ -34,7 +34,7 @@ size_t checkUpperCase(char *str)
     return TRUE;
 }
 
-size_t checkLowerCase(char* str)
+size_t checkLowerCase(char *str)
 {
     while (*str != '\0')
     {
@@ -47,11 +47,11 @@ size_t checkLowerCase(char* str)
     return TRUE;
 }
 
-size_t countUpperCase(size_t argc, char* argv[])
+size_t countUpperCase(size_t argc, char *argv[])
 {
     size_t counter = 0;
 
-    char* cmd;
+    char *cmd;
 
     for (size_t index = 0; index < argc; ++index)
     {
@@ -72,11 +72,11 @@ size_t countUpperCase(size_t argc, char* argv[])
     return counter;
 }
 
-size_t countLowerCase(size_t argc, char* argv[])
+size_t countLowerCase(size_t argc, char *argv[])
 {
     size_t counter = 0;
 
-    char* cmd;
+    char *cmd;
 
     for (size_t index = 0; index < argc; ++index)
     {
@@ -97,7 +97,7 @@ size_t countLowerCase(size_t argc, char* argv[])
     return counter;
 }
 
-size_t wordSize(char* str)
+size_t wordSize(char *str)
 {
     int count = 0;
 
