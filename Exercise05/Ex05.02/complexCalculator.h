@@ -14,10 +14,15 @@ typedef struct Complex_t
     float complexPart;
 }Complex;
 
-typedef union Number_t
+typedef union NumericType_t
 {
     Complex complexNumber;
     double realNumber;
+}NumberType;
+
+typedef struct Number_t
+{
+    NumberType num;
     int isReal;
 }Number;
 
