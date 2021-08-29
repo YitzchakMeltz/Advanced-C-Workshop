@@ -2,6 +2,10 @@
 #include<stdio.h>
 #include<malloc.h>
 
+// 0 program exited normally
+// 1 Exited with ERROR. List is NULL.
+static int g_lastLinkedListError = 0;
+
 List *CreateList(void)
 {
     List* list = (List *)malloc(sizeof(List));
@@ -14,19 +18,23 @@ List *CreateList(void)
 
 void FreeList(List *list)
 {
-    Node *iter = list->head;
+    if (!list)
+    {
+        g_lastLinkedListError = 1;
+        return;
+    }
 
-    Node *temp;
+    if (list->head)
+    {
+        Node *iter = list->head;
 
-    if(list->head)
-        while (list->head->next != NULL)
+        while (iter)
         {
-        temp = list->head;
-        list->head = list->head->next;
-        free(temp);
+            Node *next = iter->next;
+            free(iter);
+            iter = next;
         }
-
-    free(list->head);
+    }
 
     free(list);
 }
@@ -71,9 +79,11 @@ Node* Insert(Node* after, ListDataType newValue)
 {
     Node* newNode = (Node*)malloc(sizeof(Node));
 
-    newNode->data = newValue;
-
-    newNode->next = after->next;
+    if (newNode)
+    {
+        newNode->data = newValue;
+        newNode->next = after->next;
+    }
 
     after->next = newNode;
 
@@ -84,22 +94,26 @@ Node* PushFront(List *list, ListDataType newValue)
 {
     Node *newNode = (Node*)malloc(sizeof(Node));
 
-    newNode->data = newValue;
-
-    newNode->next = list->head;
+    if (newNode)
+    {
+        newNode->data = newValue;
+        newNode->next = list->head;
+    }
 
     list->head = newNode;
 
     return newNode;
 }
 
-Node* PushBack(List *list, ListDataType newValue)
+Node* PushBack(List* list, ListDataType newValue)
 {
     Node* newNode = (Node*)malloc(sizeof(Node));
 
-    newNode->data = newValue;
-
-    newNode->next = NULL;
+    if (newNode)
+    {
+        newNode->data = newValue;
+        newNode->next = NULL;
+    }
 
     if (list->head == NULL)
     {
@@ -157,7 +171,7 @@ ListDataType PopBack(List* list)
 Node *DeleteNode(List* list, Node* target)
 {
     if (!list->head)
-        return;
+        return NULL;
 
     if (list->head == target)
     {
