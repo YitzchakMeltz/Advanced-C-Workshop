@@ -8,7 +8,7 @@ void PrintHex(void *address, size_t addressSize)
 
     for (size_t index = 0; index < addressSize; ++index)
     {
-        printf("0x%x\n", *addressIter);
+        printf("0x%02x\n", *addressIter);
         ++addressIter;
     }
 }
