@@ -59,7 +59,7 @@ size_t GetListSize(List *list)
     return counter;
 }
 
-Node* GetListHead(List *list)
+Node *GetListHead(List *list)
 {
     if (!list)
     {
@@ -70,7 +70,7 @@ Node* GetListHead(List *list)
     return list->head;
 }
 
-Node* GetNextNode(Node *currentNode)
+Node *GetNextNode(Node *currentNode)
 {
     if (!currentNode->next)
     {
