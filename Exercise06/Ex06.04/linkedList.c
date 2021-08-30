@@ -2,10 +2,6 @@
 #include<stdio.h>
 #include<malloc.h>
 
-// 0 program exited normally
-// 1 Exited with ERROR. List is NULL.
-static int g_lastLinkedListError = 0;
-
 List *CreateList(void)
 {
     List* list = (List *)malloc(sizeof(List));
@@ -44,7 +40,10 @@ size_t GetListSize(List* list)
     size_t counter = 0;
 
     if (!list->head)
-        return counter; 
+    {
+        return counter;
+        g_lastLinkedListError = 1;
+    }
 
     if (list->head != NULL)
         ++counter;
@@ -62,21 +61,45 @@ size_t GetListSize(List* list)
 
 Node* GetListHead(List* list)
 {
+    if (!list)
+    {
+        g_lastLinkedListError = 1;
+        return NULL;
+    }
+
     return list->head;
 }
 
 Node* GetNextNode(Node* currentNode)
 {
+    if (!currentNode->next)
+    {
+        g_lastLinkedListError = 2;
+        return NULL;
+    }
+
     return currentNode->next;
 }
 
 ListDataType GetValue(Node* node)
 {
+    if (!node)
+    {
+        g_lastLinkedListError = 2;
+        return -1;
+    }
+
     return node->data;
 }
 
 Node* Insert(Node* after, ListDataType newValue)
 {
+    if (!after)
+    {
+        g_lastLinkedListError = 2;
+        return NULL;
+    }
+
     Node* newNode = (Node*)malloc(sizeof(Node));
 
     if (newNode)
