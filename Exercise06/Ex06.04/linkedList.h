@@ -90,16 +90,48 @@ Node* Insert(Node *after, ListDataType newValue);
 */
 Node* PushFront(List *list, ListDataType newValue);
 
+/**
+* @brief inserts a value into the back of the list
+* @param list to insert the value into
+* @param newValue a new value to be inserted into the new node
+* @return new node created
+*/
 Node* PushBack(List *list, ListDataType newValue);
 
+/**
+* @brief removes the value from the back of the list and returns it
+* @param list to remove the value from
+* @return the last value from the list
+*/
 ListDataType PopBack(List *list);
 
+/**
+* @brief deletes a node from the linked list given a node pointer
+* @param list to delete node from
+* @param target pointer to node to be deleted
+* @return the node before the deleted node, NULL if the deleted node was the first node
+*/
 Node *DeleteNode(List *list, Node *target);
 
+/**
+* @brief deletes a node from the linked list given a value
+* @param list to delete node from
+* @param value of node to be deleted
+*/
 void DeleteValue(List *list, ListDataType value);
 
+/**
+* @brief deletes a node from the linked list given a node pointer
+* @param list to find node from
+* @param value of node to find
+* @return pointer to the node found
+*/
 Node* Find(List *list, ListDataType value);
 
+/**
+* @brief prints a linked list
+* @param list to print
+*/
 void PrintIntList(List *list);
 
 #endif
