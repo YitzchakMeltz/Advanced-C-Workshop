@@ -92,7 +92,7 @@ ListDataType GetValue(Node *node)
     return node->data;
 }
 
-Node* Insert(Node* after, ListDataType newValue)
+Node *Insert(Node* after, ListDataType newValue)
 {
     if (!after)
     {
@@ -100,7 +100,7 @@ Node* Insert(Node* after, ListDataType newValue)
         return NULL;
     }
 
-    Node* newNode = (Node*)malloc(sizeof(Node));
+    Node *newNode = (Node *)malloc(sizeof(Node));
 
     if (newNode)
     {
@@ -113,9 +113,9 @@ Node* Insert(Node* after, ListDataType newValue)
     return newNode;
 }
 
-Node* PushFront(List *list, ListDataType newValue)
+Node *PushFront(List *list, ListDataType newValue)
 {
-    Node *newNode = (Node*)malloc(sizeof(Node));
+    Node *newNode = (Node *)malloc(sizeof(Node));
 
     if (newNode)
     {
@@ -128,7 +128,7 @@ Node* PushFront(List *list, ListDataType newValue)
     return newNode;
 }
 
-Node* PushBack(List* list, ListDataType newValue)
+Node* PushBack(List *list, ListDataType newValue)
 {
     Node* newNode = (Node*)malloc(sizeof(Node));
 
