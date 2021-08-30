@@ -35,7 +35,7 @@ void FreeList(List *list)
     free(list);
 }
 
-size_t GetListSize(List* list)
+size_t GetListSize(List *list)
 {
     size_t counter = 0;
 
@@ -59,7 +59,7 @@ size_t GetListSize(List* list)
     return counter;
 }
 
-Node* GetListHead(List* list)
+Node* GetListHead(List *list)
 {
     if (!list)
     {
@@ -70,7 +70,7 @@ Node* GetListHead(List* list)
     return list->head;
 }
 
-Node* GetNextNode(Node* currentNode)
+Node* GetNextNode(Node *currentNode)
 {
     if (!currentNode->next)
     {
@@ -81,7 +81,7 @@ Node* GetNextNode(Node* currentNode)
     return currentNode->next;
 }
 
-ListDataType GetValue(Node* node)
+ListDataType GetValue(Node *node)
 {
     if (!node)
     {
