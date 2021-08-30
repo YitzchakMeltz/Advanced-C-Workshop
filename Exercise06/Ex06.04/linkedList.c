@@ -191,7 +191,7 @@ ListDataType PopBack(List *list)
     return returnValue;
 }
 
-Node *DeleteNode(List* list, Node* target)
+Node *DeleteNode(List *list, Node *target)
 {
     if (!list->head)
         return NULL;
