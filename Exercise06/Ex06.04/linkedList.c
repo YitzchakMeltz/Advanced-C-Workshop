@@ -221,7 +221,7 @@ Node *DeleteNode(List *list, Node *target)
     return NULL;
 }
 
-void DeleteValue(List* list, ListDataType value)
+void DeleteValue(List *list, ListDataType value)
 {
     if (!list->head)
         return;
